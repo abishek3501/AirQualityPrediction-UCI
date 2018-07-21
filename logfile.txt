@@ -1,0 +1,131 @@
+A log file that I used to keep track of the performance whenever I made a change.
+
+Data set contains 9471x15 (1st column is index, 1 column 'Time' dropped, 12 input features, 1 output feature) - Regression problem - Finding AH
+Data-Frame  contains x: (9471,12) y: (9471,1)
+
+Used sklearn's polynomial_features with degree=2, bumping features to 91.
+Using sklearn's train-test-split: 
+Train_data_size - Train_X: (5303,90) ; Train_Y: (5303,1) (56%)
+Validation_data_size - Val_X: (2482,90) ; Val_Y: (2482,1)(30%)
+Test_data_size - Test_X: (1326,90) ; Test_Y: (1326,1)(14%)
+
+
+1. Change learning_rate -> 0.1, epochs = 2000,G.D.Optimizer,
+Fails to minimize cost.
+
+2. Change learning_rate -> 0.001, epochs = 5000, AdamOptimizer,
+RMSE =>
+Training set accuracy: 
+Root Mean Squared Error: 261850.95709650568
+
+Validation set accuracy: 
+Root Mean Squared Error: 265044.2392136784
+
+Testing set accuracy: 
+Root Mean Squared Error: 257491.41826778726
+
+Actual Train Value:  [-200.] Predicted Train value:  [-35577.6653573]
+
+Actual Validation Value:  [-200.] Predicted Validation value:  [65654.86190951]
+
+Actual Test Value:  [-200.] Predicted Test value:  [80885.74558609]
+
+
+3. Performing feature scaling (normalization)
+
+ 
+4. Learning_rate -> 0.001, epochs = 5000, G.D.Optimizer,
+RMSE =>
+Training set accuracy: 
+Root Mean Squared Error: 1.1431929389889715
+
+Validation set accuracy: 
+Root Mean Squared Error: 2.922076501501755
+
+Testing set accuracy: 
+Root Mean Squared Error: 1.1935164537948324
+
+Actual Train Value:  [-200.] Predicted Train value:  [-199.55810224]
+
+Actual Validation Value:  [-200.] Predicted Validation value:  [-212.3456181]
+
+Actual Test Value:  [-200.] Predicted Test value:  [-201.60765286]
+
+5. Learning_rate -> 0.1, epochs = 3000, AdamOptimizer,
+RMSE=>
+Training set accuracy: 
+Root Mean Squared Error: 0.15774491990071507
+
+Validation set accuracy: 
+Root Mean Squared Error: 2.805401571382802
+
+Testing set accuracy: 
+Root Mean Squared Error: 0.6111729810766634
+
+Actual Train Value:  [-200.] Predicted Train value:  [-199.94308412]
+
+Actual Validation Value:  [-200.] Predicted Validation value:  [-215.44112771]
+
+Actual Test Value:  [-200.] Predicted Test value:  [-202.36369858]
+
+6. Learning_rate -> 0.1, epochs = 5000, G.D.Optimizer
+RMSE=> Overshoots minimum
+
+7. Learning_rate ->0.1, epochs = 5000, AdamOptimizer
+RMSE => 
+Training set accuracy: 
+Root Mean Squared Error: 0.07384517001174286
+
+Validation set accuracy: 
+Root Mean Squared Error: 2.9788213418660137
+
+Testing set accuracy: 
+Root Mean Squared Error: 0.6498617612719777
+
+Actual Train Value:  [-200.] Predicted Train value:  [-200.00503135]
+
+Actual Validation Value:  [-200.] Predicted Validation value:  [-214.9402086]
+
+Actual Test Value:  [-200.] Predicted Test value:  [-203.14586942]
+
+8. Performing regularization to reduce over-fit
+
+9. Changing train/validation/test - train - 64%, validation - 20%, 16%
+reg_constant= 0.01, learning_rate = 0.1, epochs = 7500, AdamOptimizer
+RMSE =>
+Training set accuracy: 
+Root Mean Squared Error: 0.18336072543620704
+
+Validation set accuracy: 
+Root Mean Squared Error: 0.3913369755536271
+
+Testing set accuracy: 
+Root Mean Squared Error: 0.7207969260324533
+
+Actual Train Value:  [1.5936] Predicted Train value:  [1.62027233]
+
+Actual Validation Value:  [-200.] Predicted Validation value:  [-197.85125284]
+
+Actual Test Value:  [1.2564] Predicted Test value:  [1.29592274]
+
+10. Changing train/validation/test - train - 64%, validation - 20%, 16%
+reg_constant= 0.01, learning_rate = 0.1, epochs = 7500, AdamOptimizer
+RMSE =>
+
+Training set accuracy: 
+Root Mean Squared Error: 0.1836844002541801
+
+Validation set accuracy: 
+Root Mean Squared Error: 0.3947472674088382
+
+Testing set accuracy: 
+Root Mean Squared Error: 0.7243296957698581
+
+Actual Train Value:  [1.5936] Predicted Train value:  [1.61372324]
+
+Actual Validation Value:  [-200.] Predicted Validation value:  [-197.83394807]
+
+Actual Test Value:  [1.2564] Predicted Test value:  [1.28627781]
+
+
+
