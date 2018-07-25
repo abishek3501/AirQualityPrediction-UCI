@@ -128,4 +128,23 @@ Actual Validation Value:  [-200.] Predicted Validation value:  [-197.83394807]
 Actual Test Value:  [1.2564] Predicted Test value:  [1.28627781]
 
 
+For the 3-layer Deep Neural Network:
 
+1.Polynomial degree = 2; 3-layer - 40 hidden units each; L2 - 0.00025; Adam
+
+Testing set accuracy: 
+
+Mean Absolute Error: 0.7204125137272485
+Mean Squared Error: 2.4490444074309106
+Root Mean Squared Error: 1.5649423016299708
+
+Actual Test Value:  [0.3806] Predicted Test value:  [0.01348221]
+
+2. Polynomial degree = 3; 3-layer - 40 hidden units each; L2 - 0.00025; Adam
+Testing set accuracy: 
+
+Mean Absolute Error: 0.8445636548253667
+Mean Squared Error: 2.3352082632775746
+Root Mean Squared Error: 1.5281388233002833
+
+Actual Test Value:  [0.3806] Predicted Test value:  [-0.01010567]
