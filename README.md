@@ -7,3 +7,4 @@ It is seen that, keeping all the other factors of learning common between these 
 
 This shows how DNN performs better when we have a larger dataset, more complex feautres, i.e, big data. Whereas simpler regression modules performs well for small amount of data but it generally does not generalize well into the big-data era.
 
+Note: Since this model has only 13 good features initially, it is better to use Polynomial feature of order =2, ie, using 90 features and apply it on the multivariate polynomial regression model which gives the best results. This is because, since this problem does not qualify for the big-data problem, DNN overfits significantly and has lower performance when compared to the simpler regression  model.
